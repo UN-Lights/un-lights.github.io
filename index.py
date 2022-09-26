@@ -51,7 +51,7 @@ class UNLights(RadiantAPI):
     def __init__(self, *args, **kwargs):
         """"""
         super().__init__(*args, **kwargs)
-        self.ws = HackLights('ws://172.20.176.40/scada-vis/objects/ws')
+        self.ws = HackLights('wss://172.20.176.40/scada-vis/objects/ws')
 
         document.select_one('body') <= Button('On', on_click=lambda evt: self.ws.on('EEG'))
         document.select_one('body') <= Button('Off', on_click=lambda evt: self.ws.off('EEG'))
